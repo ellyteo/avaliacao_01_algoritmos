@@ -2,8 +2,8 @@ algoritmo "Primeiro Programa"
 
 var
 
-  mat : matriz[1..3, 1..4] de caractere
-  funcionario, cargo, salario, dataAd : vetor[1..3] de caractere
+  mat : matriz[1..10, 1..4] de caractere
+  funcionario, cargo, salario, dataAd : vetor[1..10] de caractere
   contador, opcao, linha, coluna : inteiro
 
 inicio
@@ -17,7 +17,7 @@ inicio
 
     se opcao = 1 entao
 
-      para contador de 1 ate 3 passo 1 faca
+      para contador de 1 ate 10 passo 1 faca
 
         escreval("Nome:")
         leia(funcionario[contador])
@@ -30,21 +30,45 @@ inicio
 
       fimpara
 
-      para contador de 1 ate 3 passo 1 faca
+      para contador de 1 ate 10 passo 1 faca
 
         escreval("Coluna                Informação")
         escreval("Funcionário           ", funcionario[contador], " ")
-        escreval("Cargo           ",cargo[contador], " ")
-        escreval("Salário           ",salario[contador], " ")
-        escreval("Data de admissão           ",dataAd[contador], " ")
+        escreval("Cargo                 ",cargo[contador], " ")
+        escreval("Salário               ",salario[contador], " ")
+        escreval("Data de admissão      ",dataAd[contador], " ")
 
       fimpara
 
+    fimse
+
+    se opcao = 2 entao
+
+      escreval("Digite o nome do funcionário:")
+      leia(funcionario[contador])
+
+      se funcionario[contador] = funcionario[contador] entao
+
+        escreval("Funcionário           ", funcionario[contador], " ")
+        escreval("Cargo                 ",cargo[contador], " ")
+        escreval("Salário               ",salario[contador], " ")
+        escreval("Data de admissão      ",dataAd[contador], " ")
+
+      senao
+
+        escreval("Nenhum resultado para pesquisa.")
+
+      fimse
     fimse
 
     contador <- contador + 1
 
   fimenquanto
 
+  se opcao = 4 entao
+
+    escreval("Você saiu do programa!")
+
+  fimse
 
 fimalgoritmo
