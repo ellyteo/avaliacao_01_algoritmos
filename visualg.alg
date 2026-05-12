@@ -61,6 +61,20 @@ inicio
       fimse
     fimse
 
+    se opcao = 3 entao
+
+      para contador de 1 ate 10 passo 1 faca
+
+        escreval("Coluna                Informação")
+        escreval("Funcionário           ", funcionario[contador], " ")
+        escreval("Cargo                 ",cargo[contador], " ")
+        escreval("Salário               ",salario[contador], " ")
+        escreval("Data de admissão      ",dataAd[contador], " ")
+
+      fimpara
+
+    fimse
+
     contador <- contador + 1
 
   fimenquanto
